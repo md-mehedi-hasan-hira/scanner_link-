@@ -1,0 +1,1021 @@
+/* =========================================
+ScreenLink
+Settings Page
+========================================= */
+
+/* =========================================
+RESET
+========================================= */
+
+* {
+  
+  margin:
+  0;
+  
+  padding:
+  0;
+  
+  box-sizing:
+  border-box;
+
+}
+
+/* =========================================
+SCREENLINK THEME
+========================================= */
+
+:root {
+
+--screenlink-bg:
+    #0f172a;
+
+--screenlink-bg-secondary:
+    #1e293b;
+
+--screenlink-bg-card:
+    #1e293b;
+
+--screenlink-bg-button:
+    #334155;
+
+--screenlink-primary:
+    #2563eb;
+
+--screenlink-primary-hover:
+    #1d4ed8;
+
+--screenlink-border:
+    #475569;
+
+--screenlink-text:
+    #ffffff;
+
+--screenlink-text-secondary:
+    #cbd5e1;
+
+--screenlink-text-muted:
+    #94a3b8;
+
+--screenlink-text-placeholder:
+    #64748b;
+
+--screenlink-success:
+    #22c55e;
+
+--screenlink-warning:
+    #f59e0b;
+
+--screenlink-danger:
+    #ef4444;
+
+--screenlink-transition:
+    0.2s;
+
+}
+
+/* =========================================
+BODY
+========================================= */
+
+body {
+
+font-family:
+    Arial,
+    sans-serif;
+
+background:
+    linear-gradient(
+        135deg,
+        var(--screenlink-bg),
+        var(--screenlink-bg-secondary)
+    );
+
+min-height:
+    100vh;
+
+color:
+    var(--screenlink-text);
+
+}
+
+/* =========================================
+LIGHT MODE
+Controlled by settings.js
+========================================= */
+
+body.light-mode {
+
+--screenlink-bg:
+    #e2e8f0;
+
+--screenlink-bg-secondary:
+    #f8fafc;
+
+--screenlink-bg-card:
+    #ffffff;
+
+--screenlink-bg-button:
+    #e2e8f0;
+
+--screenlink-primary:
+    #2563eb;
+
+--screenlink-primary-hover:
+    #1d4ed8;
+
+--screenlink-border:
+    #cbd5e1;
+
+--screenlink-text:
+    #0f172a;
+
+--screenlink-text-secondary:
+    #334155;
+
+--screenlink-text-muted:
+    #64748b;
+
+--screenlink-text-placeholder:
+    #94a3b8;
+
+}
+
+/* =========================================
+SETTINGS PAGE
+========================================= */
+
+.settings-page {
+
+min-height:
+    100vh;
+
+display:
+    flex;
+
+flex-direction:
+    column;
+
+}
+
+/* =========================================
+HEADER
+========================================= */
+
+.settings-header {
+
+min-height:
+    75px;
+
+display:
+    flex;
+
+align-items:
+    center;
+
+padding:
+    15px 20px;
+
+border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.1);
+
+position:
+    relative;
+
+background:
+    rgba(15, 23, 42, 0.25);
+
+backdrop-filter:
+    blur(10px);
+
+}
+
+body.light-mode .settings-header {
+
+background:
+    rgba(255, 255, 255, 0.65);
+
+border-bottom:
+    1px solid
+    var(--screenlink-border);
+
+}
+
+.settings-header h1 {
+
+position:
+    absolute;
+
+left:
+    50%;
+
+transform:
+    translateX(-50%);
+
+font-size:
+    21px;
+
+font-weight:
+    bold;
+
+white-space:
+    nowrap;
+
+}
+
+/* =========================================
+BACK BUTTON
+========================================= */
+
+.back-button {
+
+width:
+    45px;
+
+height:
+    45px;
+
+border:
+    1px solid
+    var(--screenlink-border);
+
+border-radius:
+    14px;
+
+background:
+    var(--screenlink-bg-card);
+
+color:
+    var(--screenlink-text);
+
+font-size:
+    27px;
+
+cursor:
+    pointer;
+
+display:
+    flex;
+
+align-items:
+    center;
+
+justify-content:
+    center;
+
+transition:
+    var(--screenlink-transition);
+
+}
+
+.back-button:active {
+
+transform:
+    scale(0.92);
+
+}
+
+/* =========================================
+MAIN
+========================================= */
+
+.settings-main {
+
+width:
+    100%;
+
+max-width:
+    650px;
+
+margin:
+    auto;
+
+padding:
+    30px 20px 50px;
+
+flex:
+    1;
+
+}
+
+/* =========================================
+SETTINGS SECTION
+========================================= */
+
+.settings-section {
+
+margin-bottom:
+    28px;
+
+}
+
+.settings-section h2 {
+
+margin-bottom:
+    13px;
+
+padding-left:
+    2px;
+
+font-size:
+    18px;
+
+color:
+    var(--screenlink-text);
+
+}
+
+/* =========================================
+SETTING CARD
+========================================= */
+
+.setting-card {
+
+width:
+    100%;
+
+min-height:
+    88px;
+
+padding:
+    17px;
+
+display:
+    flex;
+
+align-items:
+    center;
+
+justify-content:
+    space-between;
+
+gap:
+    15px;
+
+background:
+    var(--screenlink-bg-card);
+
+border:
+    1px solid
+    var(--screenlink-border);
+
+border-radius:
+    17px;
+
+margin-bottom:
+    12px;
+
+transition:
+    var(--screenlink-transition);
+
+}
+
+.setting-card:active {
+
+transform:
+    scale(0.99);
+
+}
+
+/* =========================================
+SETTING INFO
+========================================= */
+
+.setting-info {
+
+flex:
+    1;
+
+min-width:
+    0;
+
+}
+
+.setting-info h3 {
+
+margin-bottom:
+    7px;
+
+font-size:
+    15px;
+
+color:
+    var(--screenlink-text);
+
+}
+
+.setting-info p {
+
+font-size:
+    13px;
+
+line-height:
+    1.5;
+
+color:
+    var(--screenlink-text-muted);
+
+}
+
+/* =========================================
+DEVICE NAME INPUT
+========================================= */
+
+.setting-input {
+
+width:
+    145px;
+
+height:
+    42px;
+
+padding:
+    0 12px;
+
+border:
+    1px solid
+    var(--screenlink-border);
+
+border-radius:
+    12px;
+
+outline:
+    none;
+
+background:
+    var(--screenlink-bg-secondary);
+
+color:
+    var(--screenlink-text);
+
+font-size:
+    13px;
+
+transition:
+    var(--screenlink-transition);
+
+}
+
+.setting-input::placeholder {
+
+color:
+    var(--screenlink-text-placeholder);
+
+}
+
+.setting-input:focus {
+
+border-color:
+    var(--screenlink-primary);
+
+box-shadow:
+    0 0 0 3px
+    rgba(37, 99, 235, 0.18);
+
+}
+
+/* =========================================
+SWITCH
+========================================= */
+
+.switch {
+
+width:
+    52px;
+
+height:
+    30px;
+
+position:
+    relative;
+
+flex-shrink:
+    0;
+
+}
+
+.switch input {
+
+opacity:
+    0;
+
+width:
+    0;
+
+height:
+    0;
+
+}
+
+/* =========================================
+SWITCH SLIDER
+========================================= */
+
+.slider {
+
+position:
+    absolute;
+
+inset:
+    0;
+
+cursor:
+    pointer;
+
+background:
+    #475569;
+
+border-radius:
+    30px;
+
+transition:
+    var(--screenlink-transition);
+
+}
+
+.slider::before {
+
+content:
+    "";
+
+width:
+    22px;
+
+height:
+    22px;
+
+position:
+    absolute;
+
+left:
+    4px;
+
+top:
+    4px;
+
+border-radius:
+    50%;
+
+background:
+    white;
+
+transition:
+    var(--screenlink-transition);
+
+}
+
+.switch input:checked + .slider {
+
+background:
+    var(--screenlink-primary);
+
+}
+
+.switch input:checked + .slider::before {
+
+transform:
+    translateX(22px);
+
+}
+
+/* =========================================
+ACTION BUTTON
+========================================= */
+
+.action-button {
+
+min-width:
+    80px;
+
+height:
+    42px;
+
+padding:
+    0 15px;
+
+border:
+    none;
+
+border-radius:
+    12px;
+
+background:
+    var(--screenlink-primary);
+
+color:
+    white;
+
+font-size:
+    13px;
+
+font-weight:
+    bold;
+
+cursor:
+    pointer;
+
+transition:
+    var(--screenlink-transition);
+
+}
+
+.action-button:hover {
+
+background:
+    var(--screenlink-primary-hover);
+
+}
+
+.action-button:active {
+
+transform:
+    scale(0.96);
+
+}
+
+/* =========================================
+CAMERA CARD
+========================================= */
+
+.camera-card {
+
+border-color:
+    var(--screenlink-border);
+
+}
+
+/* =========================================
+DANGER CARD
+========================================= */
+
+.danger-card {
+
+border-color:
+    rgba(239, 68, 68, 0.45);
+
+}
+
+/* =========================================
+DANGER BUTTON
+========================================= */
+
+.danger-button {
+
+min-width:
+    80px;
+
+height:
+    42px;
+
+padding:
+    0 15px;
+
+border:
+    none;
+
+border-radius:
+    12px;
+
+background:
+    var(--screenlink-danger);
+
+color:
+    white;
+
+font-size:
+    13px;
+
+font-weight:
+    bold;
+
+cursor:
+    pointer;
+
+transition:
+    var(--screenlink-transition);
+
+}
+
+.danger-button:active {
+
+transform:
+    scale(0.96);
+
+}
+
+/* =========================================
+ABOUT CARD
+========================================= */
+
+.about-card {
+
+padding:
+    22px;
+
+text-align:
+    center;
+
+border-radius:
+    18px;
+
+background:
+    var(--screenlink-bg-card);
+
+border:
+    1px solid
+    var(--screenlink-border);
+
+}
+
+.about-card h3 {
+
+margin-bottom:
+    9px;
+
+font-size:
+    20px;
+
+color:
+    var(--screenlink-text);
+
+}
+
+.about-card p {
+
+font-size:
+    14px;
+
+line-height:
+    1.6;
+
+color:
+    var(--screenlink-text-muted);
+
+}
+
+.about-card .version {
+
+margin-top:
+    12px;
+
+color:
+    var(--screenlink-text-secondary);
+
+font-weight:
+    bold;
+
+}
+
+/* =========================================
+SAVE STATUS
+========================================= */
+
+.save-status {
+
+margin-top:
+    10px;
+
+padding:
+    15px;
+
+border-radius:
+    14px;
+
+text-align:
+    center;
+
+background:
+    var(--screenlink-bg-card);
+
+border:
+    1px solid
+    var(--screenlink-border);
+
+color:
+    var(--screenlink-text-muted);
+
+font-size:
+    13px;
+
+line-height:
+    1.5;
+
+transition:
+    var(--screenlink-transition);
+
+}
+
+/* =========================================
+STATUS TYPES
+Used by settings.js
+========================================= */
+
+.save-status.success {
+
+border-color:
+    var(--screenlink-success);
+
+color:
+    var(--screenlink-success);
+
+}
+
+.save-status.warning {
+
+border-color:
+    var(--screenlink-warning);
+
+color:
+    var(--screenlink-warning);
+
+}
+
+.save-status.error {
+
+border-color:
+    var(--screenlink-danger);
+
+color:
+    var(--screenlink-danger);
+
+}
+
+/* =========================================
+DISABLED
+========================================= */
+
+button:disabled {
+
+opacity:
+    0.55;
+
+cursor:
+    not-allowed;
+
+}
+
+/* =========================================
+SCROLLBAR
+========================================= */
+
+::-webkit-scrollbar {
+
+width:
+    7px;
+
+}
+
+::-webkit-scrollbar-track {
+
+background:
+    var(--screenlink-bg);
+
+}
+
+::-webkit-scrollbar-thumb {
+
+background:
+    var(--screenlink-border);
+
+border-radius:
+    10px;
+
+}
+
+/* =========================================
+MOBILE
+========================================= */
+
+@media (
+max-width: 480px
+) {
+
+.settings-main {
+
+    padding:
+        25px 15px 40px;
+
+}
+
+
+
+.settings-header {
+
+    padding:
+        15px;
+
+}
+
+
+
+.settings-header h1 {
+
+    font-size:
+        19px;
+
+}
+
+
+
+.settings-section h2 {
+
+    font-size:
+        17px;
+
+}
+
+
+
+.setting-card {
+
+    min-height:
+        82px;
+
+    padding:
+        15px;
+
+    gap:
+        12px;
+
+}
+
+
+
+.setting-info h3 {
+
+    font-size:
+        14px;
+
+}
+
+
+
+.setting-info p {
+
+    font-size:
+        12px;
+
+}
+
+
+
+.setting-input {
+
+    width:
+        120px;
+
+    font-size:
+        12px;
+
+}
+
+}
+
+/* =========================================
+SMALL MOBILE
+========================================= */
+
+@media (
+max-width: 350px
+) {
+
+.setting-card {
+
+    flex-direction:
+        column;
+
+    align-items:
+        flex-start;
+
+}
+
+
+
+.switch {
+
+    align-self:
+        flex-end;
+
+}
+
+
+
+.setting-input {
+
+    width:
+        100%;
+
+}
+
+
+
+.action-button,
+
+.danger-button {
+
+    align-self:
+        flex-end;
+
+}
+
+}

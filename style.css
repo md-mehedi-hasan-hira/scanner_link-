@@ -1,0 +1,632 @@
+/* =========================================
+ScreenLink
+Home Page
+Connected With Settings System
+========================================= */
+
+/* =========================================
+RESET
+========================================= */
+
+* {
+  
+  margin:
+  0;
+  
+  padding:
+  0;
+  
+  box-sizing:
+  border-box;
+
+}
+
+/* =========================================
+THEME VARIABLES
+========================================= */
+
+:root {
+
+--screenlink-bg:
+    #0f172a;
+
+--screenlink-bg-secondary:
+    #1e293b;
+
+--screenlink-card:
+    #1e293b;
+
+--screenlink-button:
+    #334155;
+
+--screenlink-primary:
+    #2563eb;
+
+--screenlink-border:
+    #475569;
+
+--screenlink-text:
+    #ffffff;
+
+--screenlink-text-secondary:
+    #cbd5e1;
+
+--screenlink-text-muted:
+    #94a3b8;
+
+--screenlink-text-dark-muted:
+    #64748b;
+
+}
+
+/* =========================================
+BODY
+========================================= */
+
+body {
+
+font-family:
+    Arial,
+    sans-serif;
+
+background:
+    linear-gradient(
+        135deg,
+        var(--screenlink-bg),
+        var(--screenlink-bg-secondary)
+    );
+
+min-height:
+    100vh;
+
+color:
+    var(--screenlink-text);
+
+}
+
+/* =========================================
+LIGHT MODE
+Controlled by settings.js / script.js
+========================================= */
+
+body.light-mode {
+
+--screenlink-bg:
+    #e2e8f0;
+
+--screenlink-bg-secondary:
+    #f8fafc;
+
+--screenlink-card:
+    #ffffff;
+
+--screenlink-button:
+    #e2e8f0;
+
+--screenlink-primary:
+    #2563eb;
+
+--screenlink-border:
+    #cbd5e1;
+
+--screenlink-text:
+    #0f172a;
+
+--screenlink-text-secondary:
+    #334155;
+
+--screenlink-text-muted:
+    #64748b;
+
+--screenlink-text-dark-muted:
+    #94a3b8;
+
+}
+
+/* =========================================
+APP
+========================================= */
+
+.app {
+
+min-height:
+    100vh;
+
+display:
+    flex;
+
+flex-direction:
+    column;
+
+}
+
+/* =========================================
+HEADER
+========================================= */
+
+.header {
+
+padding:
+    25px 20px;
+
+border-bottom:
+    1px solid
+    var(--screenlink-border);
+
+}
+
+.logo {
+
+display:
+    flex;
+
+align-items:
+    center;
+
+gap:
+    12px;
+
+}
+
+.logo-icon {
+
+width:
+    48px;
+
+height:
+    48px;
+
+border-radius:
+    14px;
+
+display:
+    flex;
+
+align-items:
+    center;
+
+justify-content:
+    center;
+
+background:
+    var(--screenlink-primary);
+
+color:
+    white;
+
+font-size:
+    24px;
+
+font-weight:
+    bold;
+
+}
+
+.logo-text h1 {
+
+font-size:
+    22px;
+
+margin-bottom:
+    4px;
+
+}
+
+.logo-text span {
+
+font-size:
+    12px;
+
+color:
+    var(--screenlink-text-muted);
+
+}
+
+/* =========================================
+MAIN
+========================================= */
+
+.main {
+
+width:
+    100%;
+
+max-width:
+    500px;
+
+margin:
+    auto;
+
+padding:
+    30px 20px;
+
+}
+
+/* =========================================
+WELCOME
+========================================= */
+
+.welcome {
+
+text-align:
+    center;
+
+margin-bottom:
+    30px;
+
+}
+
+.welcome h2 {
+
+font-size:
+    25px;
+
+margin-bottom:
+    10px;
+
+color:
+    var(--screenlink-text);
+
+}
+
+.welcome p {
+
+color:
+    var(--screenlink-text-muted);
+
+line-height:
+    1.6;
+
+font-size:
+    14px;
+
+}
+
+/* =========================================
+MAIN BUTTON
+========================================= */
+
+.main-button {
+
+width:
+    100%;
+
+border:
+    none;
+
+border-radius:
+    18px;
+
+padding:
+    18px;
+
+margin-bottom:
+    15px;
+
+display:
+    flex;
+
+align-items:
+    center;
+
+gap:
+    15px;
+
+text-align:
+    left;
+
+color:
+    white;
+
+cursor:
+    pointer;
+
+transition:
+    0.2s;
+
+}
+
+.main-button:active {
+
+transform:
+    scale(0.97);
+
+}
+
+/* =========================================
+CREATE QR BUTTON
+========================================= */
+
+.create-qr {
+
+background:
+    var(--screenlink-primary);
+
+}
+
+/* =========================================
+CONNECT BUTTON
+========================================= */
+
+.connect {
+
+background:
+    var(--screenlink-button);
+
+border:
+    1px solid
+    transparent;
+
+}
+
+/* =========================================
+SETTINGS BUTTON
+========================================= */
+
+.settings {
+
+background:
+    var(--screenlink-card);
+
+border:
+    1px solid
+    var(--screenlink-border);
+
+color:
+    var(--screenlink-text);
+
+}
+
+/* =========================================
+BUTTON ICON
+========================================= */
+
+.button-icon {
+
+width:
+    45px;
+
+height:
+    45px;
+
+flex-shrink:
+    0;
+
+display:
+    flex;
+
+align-items:
+    center;
+
+justify-content:
+    center;
+
+border-radius:
+    12px;
+
+background:
+    rgba(255, 255, 255, 0.12);
+
+font-size:
+    22px;
+
+}
+
+body.light-mode .connect .button-icon,
+
+body.light-mode .settings .button-icon {
+
+background:
+    rgba(15, 23, 42, 0.08);
+
+}
+
+/* =========================================
+BUTTON TEXT
+========================================= */
+
+.main-button strong {
+
+display:
+    block;
+
+font-size:
+    16px;
+
+margin-bottom:
+    5px;
+
+}
+
+.main-button small {
+
+display:
+    block;
+
+color:
+    var(--screenlink-text-secondary);
+
+font-size:
+    12px;
+
+}
+
+.create-qr small {
+
+color:
+    rgba(255, 255, 255, 0.8);
+
+}
+
+/* =========================================
+DISABLED CONNECT BUTTON
+Controlled by Settings
+========================================= */
+
+.main-button:disabled {
+
+opacity:
+    0.5;
+
+cursor:
+    not-allowed;
+
+transform:
+    none;
+
+}
+
+.main-button:disabled:active {
+
+transform:
+    none;
+
+}
+
+/* =========================================
+SETTINGS INFORMATION
+========================================= */
+
+.settings-info {
+
+margin-top:
+    10px;
+
+padding:
+    14px 15px;
+
+border-radius:
+    14px;
+
+background:
+    var(--screenlink-card);
+
+border:
+    1px solid
+    var(--screenlink-border);
+
+color:
+    var(--screenlink-text-muted);
+
+text-align:
+    center;
+
+font-size:
+    12px;
+
+line-height:
+    1.5;
+
+}
+
+/* =========================================
+FOOTER
+========================================= */
+
+.footer {
+
+text-align:
+    center;
+
+padding:
+    20px;
+
+margin-top:
+    auto;
+
+border-top:
+    1px solid
+    var(--screenlink-border);
+
+}
+
+.footer p {
+
+font-weight:
+    bold;
+
+margin-bottom:
+    5px;
+
+color:
+    var(--screenlink-text);
+
+}
+
+.footer span {
+
+font-size:
+    11px;
+
+color:
+    var(--screenlink-text-dark-muted);
+
+}
+
+/* =========================================
+MOBILE
+========================================= */
+
+@media (
+max-width: 400px
+) {
+
+.main {
+
+    padding:
+        25px 15px;
+
+}
+
+
+
+.header {
+
+    padding:
+        20px 15px;
+
+}
+
+
+
+.welcome h2 {
+
+    font-size:
+        22px;
+
+}
+
+
+
+.main-button {
+
+    padding:
+        15px;
+
+}
+
+
+
+.main-button strong {
+
+    font-size:
+        15px;
+
+}
+
+
+
+.button-icon {
+
+    width:
+        42px;
+
+    height:
+        42px;
+
+    font-size:
+        20px;
+
+}
+
+}

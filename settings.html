@@ -1,0 +1,636 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>
+    Settings - ScreenLink
+</title>
+
+
+<!-- SETTINGS CSS -->
+
+<link
+    rel="stylesheet"
+    href="settings.css"
+>
+
+</head><body><div class="settings-page">
+
+
+    <!-- =============================
+         HEADER
+    ============================== -->
+
+    <header class="settings-header">
+
+
+        <button
+            type="button"
+            class="back-button"
+            id="backButton"
+            aria-label="Go Back"
+        >
+            ←
+        </button>
+
+
+        <h1>
+            Settings
+        </h1>
+
+
+    </header>
+
+
+
+    <!-- =============================
+         MAIN
+    ============================== -->
+
+    <main class="settings-main">
+
+
+
+        <!-- =========================
+             PROFILE / DEVICE NAME
+        ========================== -->
+
+        <section
+            class="settings-section"
+        >
+
+
+            <h2>
+                👤 Profile
+            </h2>
+
+
+            <div
+                class="setting-card"
+            >
+
+
+                <div
+                    class="setting-info"
+                >
+
+
+                    <h3>
+                        Device Name
+                    </h3>
+
+
+                    <p>
+                        Choose a name for this ScreenLink device.
+                    </p>
+
+
+                </div>
+
+
+                <input
+                    type="text"
+                    id="deviceName"
+                    class="setting-input"
+                    placeholder="My ScreenLink Device"
+                    maxlength="30"
+                    autocomplete="off"
+                >
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             APPEARANCE
+        ========================== -->
+
+        <section
+            class="settings-section"
+        >
+
+
+            <h2>
+                🎨 Appearance
+            </h2>
+
+
+            <div
+                class="setting-card"
+            >
+
+
+                <div
+                    class="setting-info"
+                >
+
+
+                    <h3>
+                        Dark Mode
+                    </h3>
+
+
+                    <p>
+                        Use the dark ScreenLink theme.
+                    </p>
+
+
+                </div>
+
+
+                <label
+                    class="switch"
+                >
+
+
+                    <input
+                        type="checkbox"
+                        id="darkModeToggle"
+                        checked
+                    >
+
+
+                    <span
+                        class="slider"
+                    ></span>
+
+
+                </label>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             NOTIFICATIONS
+        ========================== -->
+
+        <section
+            class="settings-section"
+        >
+
+
+            <h2>
+                🔔 Notifications
+            </h2>
+
+
+            <div
+                class="setting-card"
+            >
+
+
+                <div
+                    class="setting-info"
+                >
+
+
+                    <h3>
+                        Connection Notifications
+                    </h3>
+
+
+                    <p>
+                        Show alerts for connection requests.
+                    </p>
+
+
+                </div>
+
+
+                <label
+                    class="switch"
+                >
+
+
+                    <input
+                        type="checkbox"
+                        id="notificationToggle"
+                        checked
+                    >
+
+
+                    <span
+                        class="slider"
+                    ></span>
+
+
+                </label>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             CONNECTION SETTINGS
+        ========================== -->
+
+        <section
+            class="settings-section"
+        >
+
+
+            <h2>
+                📱 Connection Settings
+            </h2>
+
+
+            <div
+                class="setting-card"
+            >
+
+
+                <div
+                    class="setting-info"
+                >
+
+
+                    <h3>
+                        Allow Connection Requests
+                    </h3>
+
+
+                    <p>
+                        Allow other ScreenLink devices to request a connection.
+                    </p>
+
+
+                </div>
+
+
+                <label
+                    class="switch"
+                >
+
+
+                    <input
+                        type="checkbox"
+                        id="connectionToggle"
+                        checked
+                    >
+
+
+                    <span
+                        class="slider"
+                    ></span>
+
+
+                </label>
+
+
+            </div>
+
+
+            <div
+                class="setting-card"
+            >
+
+
+                <div
+                    class="setting-info"
+                >
+
+
+                    <h3>
+                        Auto Approve Connections
+                    </h3>
+
+
+                    <p>
+                        Automatically approve trusted connections.
+                    </p>
+
+
+                </div>
+
+
+                <label
+                    class="switch"
+                >
+
+
+                    <input
+                        type="checkbox"
+                        id="autoApproveToggle"
+                    >
+
+
+                    <span
+                        class="slider"
+                    ></span>
+
+
+                </label>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             PRIVACY & SECURITY
+        ========================== -->
+
+        <section
+            class="settings-section"
+        >
+
+
+            <h2>
+                🔒 Privacy & Security
+            </h2>
+
+
+            <div
+                class="setting-card"
+            >
+
+
+                <div
+                    class="setting-info"
+                >
+
+
+                    <h3>
+                        Require Connection Approval
+                    </h3>
+
+
+                    <p>
+                        Ask for approval before starting screen sharing.
+                    </p>
+
+
+                </div>
+
+
+                <label
+                    class="switch"
+                >
+
+
+                    <input
+                        type="checkbox"
+                        id="approvalToggle"
+                        checked
+                    >
+
+
+                    <span
+                        class="slider"
+                    ></span>
+
+
+                </label>
+
+
+            </div>
+
+
+
+            <div
+                class="setting-card"
+            >
+
+
+                <div
+                    class="setting-info"
+                >
+
+
+                    <h3>
+                        Share Device Name
+                    </h3>
+
+
+                    <p>
+                        Allow connected devices to see your device name.
+                    </p>
+
+
+                </div>
+
+
+                <label
+                    class="switch"
+                >
+
+
+                    <input
+                        type="checkbox"
+                        id="shareDeviceNameToggle"
+                        checked
+                    >
+
+
+                    <span
+                        class="slider"
+                    ></span>
+
+
+                </label>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             CAMERA PERMISSION
+        ========================== -->
+
+        <section
+            class="settings-section"
+        >
+
+
+            <h2>
+                📷 Camera Permission
+            </h2>
+
+
+            <div
+                class="setting-card camera-card"
+            >
+
+
+                <div
+                    class="setting-info"
+                >
+
+
+                    <h3>
+                        QR Scanner Camera
+                    </h3>
+
+
+                    <p
+                        id="cameraStatus"
+                    >
+                        Camera permission status will appear here.
+                    </p>
+
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="action-button"
+                    id="cameraButton"
+                >
+                    Check
+                </button>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             CLEAR SESSION DATA
+        ========================== -->
+
+        <section
+            class="settings-section"
+        >
+
+
+            <h2>
+                🗑 Data
+            </h2>
+
+
+            <div
+                class="setting-card danger-card"
+            >
+
+
+                <div
+                    class="setting-info"
+                >
+
+
+                    <h3>
+                        Clear Session Data
+                    </h3>
+
+
+                    <p>
+                        Remove saved ScreenLink connection and session information.
+                    </p>
+
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="danger-button"
+                    id="clearSessionButton"
+                >
+                    Clear
+                </button>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             ABOUT SCREENLINK
+        ========================== -->
+
+        <section
+            class="settings-section"
+        >
+
+
+            <h2>
+                ℹ️ About ScreenLink
+            </h2>
+
+
+            <div
+                class="about-card"
+            >
+
+
+                <h3>
+                    ScreenLink
+                </h3>
+
+
+                <p>
+                    Connect and share screens between devices.
+                </p>
+
+
+                <p
+                    class="version"
+                >
+                    Version 1.0
+                </p>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             SAVE STATUS
+        ========================== -->
+
+        <div
+            class="save-status"
+            id="saveStatus"
+        >
+            Settings are saved automatically.
+        </div>
+
+
+
+    </main>
+
+
+</div>
+
+
+
+<!-- SETTINGS JAVASCRIPT -->
+
+<script
+    src="settings.js"
+></script>
+
+</body></html>
