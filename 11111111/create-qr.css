@@ -1,0 +1,363 @@
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+body {
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0f172a,
+            #1e293b
+        );
+
+    color: white;
+
+    min-height: 100vh;
+
+}
+
+
+.qr-page {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+
+/* HEADER */
+
+.qr-header {
+
+    height: 70px;
+
+    padding: 0 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,0.1);
+
+}
+
+
+.qr-header h1 {
+
+    font-size: 20px;
+
+}
+
+
+.back-button {
+
+    width: 42px;
+
+    height: 42px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #334155;
+
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+}
+
+
+
+/* MAIN */
+
+.qr-main {
+
+    width: 100%;
+
+    max-width: 500px;
+
+    margin: auto;
+
+    padding: 30px 20px;
+
+    text-align: center;
+
+}
+
+
+.title-section {
+
+    margin-bottom: 25px;
+
+}
+
+
+.title-section h2 {
+
+    font-size: 23px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.title-section p {
+
+    color: #94a3b8;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+}
+
+
+
+/* QR BOX */
+
+.qr-box {
+
+    width: 250px;
+
+    height: 250px;
+
+    margin: 0 auto 25px;
+
+    padding: 15px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    box-shadow:
+        0 15px 40px
+        rgba(0,0,0,0.35);
+
+}
+
+
+#qrcode {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+#qrcode img {
+
+    max-width: 100%;
+
+    height: auto;
+
+}
+
+
+
+/* CONNECTION CODE */
+
+.connection-box {
+
+    background: #1e293b;
+
+    border:
+        1px solid
+        #334155;
+
+    border-radius: 15px;
+
+    padding: 15px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.connection-box span {
+
+    display: block;
+
+    color: #94a3b8;
+
+    font-size: 12px;
+
+    margin-bottom: 7px;
+
+}
+
+
+.connection-box strong {
+
+    font-size: 20px;
+
+    letter-spacing: 3px;
+
+}
+
+
+
+/* STATUS */
+
+.status {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    color: #cbd5e1;
+
+    font-size: 13px;
+
+    margin-bottom: 22px;
+
+}
+
+
+.status-dot {
+
+    width: 9px;
+
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: #22c55e;
+
+}
+
+
+
+/* INFO */
+
+.info-box {
+
+    text-align: left;
+
+    background: #172033;
+
+    border-radius: 15px;
+
+    padding: 18px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.info-box p {
+
+    color: #cbd5e1;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    margin-bottom: 8px;
+
+}
+
+
+.info-box p:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+
+/* CANCEL */
+
+.cancel-button {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    background: #334155;
+
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+}
+
+
+.cancel-button:active,
+.back-button:active {
+
+    transform: scale(0.97);
+
+}
+
+
+
+/* MOBILE */
+
+@media (max-width: 400px) {
+
+    .qr-main {
+
+        padding:
+            25px 15px;
+
+    }
+
+
+    .qr-box {
+
+        width: 220px;
+
+        height: 220px;
+
+    }
+
+
+    .title-section h2 {
+
+        font-size: 21px;
+
+    }
+
+}

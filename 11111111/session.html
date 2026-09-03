@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Screen Session - ScreenLink</title>
+
+
+    <link
+        rel="stylesheet"
+        href="session.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <div class="session-page">
+
+
+        <!-- HEADER -->
+
+        <header class="session-header">
+
+
+            <button
+                type="button"
+                class="back-button"
+                id="backButton"
+            >
+                ←
+            </button>
+
+
+            <h1>
+                ScreenLink
+            </h1>
+
+
+        </header>
+
+
+
+        <!-- MAIN -->
+
+        <main class="session-main">
+
+
+            <!-- ICON -->
+
+            <div class="session-icon">
+
+                📱
+
+            </div>
+
+
+
+            <!-- TITLE -->
+
+            <h2>
+                Connection Ready
+            </h2>
+
+
+            <p class="session-description">
+
+                The connection request has been approved.
+
+            </p>
+
+
+
+            <!-- CONNECTION CARD -->
+
+            <div class="session-card">
+
+
+                <div class="card-row">
+
+
+                    <span>
+                        Connection Code
+                    </span>
+
+
+                    <strong
+                        id="sessionCode"
+                    >
+                        ------
+                    </strong>
+
+
+                </div>
+
+
+
+                <div class="card-row">
+
+
+                    <span>
+                        Status
+                    </span>
+
+
+                    <strong
+                        id="sessionStatus"
+                    >
+                        Ready
+                    </strong>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- PERMISSION -->
+
+            <div class="permission-card">
+
+
+                <div class="permission-icon">
+
+                    🔒
+
+                </div>
+
+
+                <div>
+
+
+                    <h3>
+                        Screen Sharing Permission
+                    </h3>
+
+
+                    <p>
+
+                        To start sharing a screen,
+                        the device owner must approve
+                        screen capture permission.
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- START BUTTON -->
+
+            <button
+                type="button"
+                class="start-button"
+                id="startButton"
+            >
+
+                Start Screen Sharing
+
+            </button>
+
+
+
+            <!-- DISCONNECT BUTTON -->
+
+            <button
+                type="button"
+                class="disconnect-button"
+                id="disconnectButton"
+            >
+
+                Disconnect
+
+            </button>
+
+
+
+            <!-- PRIVACY -->
+
+            <div class="privacy-info">
+
+                🔐 Screen sharing only starts
+                after explicit user permission.
+
+            </div>
+
+
+        </main>
+
+
+    </div>
+
+
+
+    <script
+        src="session.js"
+    ></script>
+
+
+</body>
+
+</html>

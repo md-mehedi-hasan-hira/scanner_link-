@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Connection - ScreenLink</title>
+
+
+    <!-- CONNECTION CSS -->
+
+    <link
+        rel="stylesheet"
+        href="connection.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <div class="connection-page">
+
+
+        <!-- ============================== -->
+        <!-- HEADER -->
+        <!-- ============================== -->
+
+        <header class="connection-header">
+
+
+            <button
+                class="back-button"
+                id="backButton"
+                type="button"
+            >
+                ←
+            </button>
+
+
+            <h1>
+                ScreenLink
+            </h1>
+
+
+        </header>
+
+
+
+        <!-- ============================== -->
+        <!-- MAIN -->
+        <!-- ============================== -->
+
+        <main class="connection-main">
+
+
+            <!-- CONNECTION ICON -->
+
+            <div class="connection-icon">
+
+                🔗
+
+            </div>
+
+
+
+            <!-- TITLE -->
+
+            <h2>
+                Connection Request
+            </h2>
+
+
+            <p class="connection-description">
+
+                A device wants to connect
+                with your ScreenLink session.
+
+            </p>
+
+
+
+            <!-- ============================== -->
+            <!-- DEVICE CARD -->
+            <!-- ============================== -->
+
+            <div class="device-card">
+
+
+                <div class="device-icon">
+
+                    📱
+
+                </div>
+
+
+                <div class="device-info">
+
+
+                    <h3 id="deviceName">
+                        ScreenLink Device
+                    </h3>
+
+
+                    <p>
+
+                        Connection Code:
+
+                        <strong
+                            id="connectionCode"
+                        >
+                            ------
+
+                        </strong>
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ============================== -->
+            <!-- PERMISSION WARNING -->
+            <!-- ============================== -->
+
+            <div class="permission-box">
+
+
+                <div class="permission-icon">
+
+                    🔒
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Permission Required
+                    </h3>
+
+
+                    <p>
+
+                        Screen sharing will only
+                        start after you explicitly
+                        allow this connection.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ============================== -->
+            <!-- STATUS -->
+            <!-- ============================== -->
+
+            <div
+                class="connection-status"
+                id="connectionStatus"
+            >
+
+                Waiting for your decision...
+
+            </div>
+
+
+
+            <!-- ============================== -->
+            <!-- ACTION BUTTONS -->
+            <!-- ============================== -->
+
+            <div class="action-buttons">
+
+
+                <button
+                    class="deny-button"
+                    id="denyButton"
+                    type="button"
+                >
+
+                    Deny
+
+                </button>
+
+
+
+                <button
+                    class="allow-button"
+                    id="allowButton"
+                    type="button"
+                >
+
+                    Allow
+
+                </button>
+
+
+            </div>
+
+
+
+            <!-- ============================== -->
+            <!-- SECURITY INFORMATION -->
+            <!-- ============================== -->
+
+            <div class="security-info">
+
+
+                <h3>
+                    🔐 Your Privacy
+                </h3>
+
+
+                <p>
+
+                    ScreenLink cannot access or
+                    share your screen without your
+                    permission.
+
+                </p>
+
+
+                <p>
+
+                    You can deny the request at
+                    any time.
+
+                </p>
+
+
+            </div>
+
+
+        </main>
+
+
+    </div>
+
+
+
+    <!-- ============================== -->
+    <!-- PAGE JAVASCRIPT -->
+    <!-- ============================== -->
+
+    <script
+        src="connection.js"
+    ></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,838 @@
+/* =========================================
+ScreenLink
+Connect Device Page
+Shared ScreenLink Theme Compatible
+========================================= */
+
+/* =========================================
+SCREENLINK SHARED THEME VARIABLES
+Same theme can be used in:
+scanner.css
+connection.css
+session.css
+viewer.css
+share.css
+========================================= */
+
+:root {
+
+--screenlink-bg:
+    #0f172a;
+
+--screenlink-bg-secondary:
+    #1e293b;
+
+--screenlink-bg-card:
+    #1e293b;
+
+--screenlink-bg-button:
+    #334155;
+
+--screenlink-primary:
+    #2563eb;
+
+--screenlink-primary-hover:
+    #1d4ed8;
+
+--screenlink-border:
+    #475569;
+
+--screenlink-text:
+    #ffffff;
+
+--screenlink-text-secondary:
+    #cbd5e1;
+
+--screenlink-text-muted:
+    #94a3b8;
+
+--screenlink-text-placeholder:
+    #64748b;
+
+--screenlink-success:
+    #22c55e;
+
+--screenlink-warning:
+    #f59e0b;
+
+--screenlink-danger:
+    #ef4444;
+
+--screenlink-radius-small:
+    12px;
+
+--screenlink-radius:
+    16px;
+
+--screenlink-transition:
+    0.2s;
+
+}
+
+/* =========================================
+RESET
+========================================= */
+
+* {
+  
+  margin:
+  0;
+  
+  padding:
+  0;
+  
+  box-sizing:
+  border-box;
+
+}
+
+/* =========================================
+BODY
+========================================= */
+
+body {
+
+font-family:
+    Arial,
+    sans-serif;
+
+background:
+    linear-gradient(
+        135deg,
+        var(--screenlink-bg),
+        var(--screenlink-bg-secondary)
+    );
+
+min-height:
+    100vh;
+
+color:
+    var(--screenlink-text);
+
+}
+
+/* =========================================
+CONNECT PAGE
+========================================= */
+
+.connect-page {
+
+min-height:
+    100vh;
+
+display:
+    flex;
+
+flex-direction:
+    column;
+
+}
+
+/* =========================================
+HEADER
+Compatible with all ScreenLink pages
+========================================= */
+
+.connect-header {
+
+min-height:
+    75px;
+
+display:
+    flex;
+
+align-items:
+    center;
+
+padding:
+    15px 20px;
+
+border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.1);
+
+position:
+    relative;
+
+}
+
+.connect-header h1 {
+
+position:
+    absolute;
+
+left:
+    50%;
+
+transform:
+    translateX(-50%);
+
+font-size:
+    21px;
+
+font-weight:
+    bold;
+
+white-space:
+    nowrap;
+
+}
+
+/* =========================================
+BACK BUTTON
+Can be used by:
+scanner
+connection
+session
+viewer
+share
+========================================= */
+
+.back-button {
+
+width:
+    45px;
+
+height:
+    45px;
+
+border:
+    1px solid
+    var(--screenlink-border);
+
+border-radius:
+    14px;
+
+background:
+    var(--screenlink-bg-secondary);
+
+color:
+    var(--screenlink-text);
+
+font-size:
+    27px;
+
+cursor:
+    pointer;
+
+display:
+    flex;
+
+align-items:
+    center;
+
+justify-content:
+    center;
+
+transition:
+    var(--screenlink-transition);
+
+}
+
+.back-button:active {
+
+transform:
+    scale(0.92);
+
+}
+
+/* =========================================
+MAIN
+========================================= */
+
+.connect-main {
+
+width:
+    100%;
+
+max-width:
+    500px;
+
+margin:
+    auto;
+
+padding:
+    35px 20px;
+
+flex:
+    1;
+
+}
+
+/* =========================================
+TITLE SECTION
+========================================= */
+
+.title-section {
+
+text-align:
+    center;
+
+margin-bottom:
+    35px;
+
+}
+
+/* =========================================
+DEVICE ICON
+Shared ScreenLink Card Style
+========================================= */
+
+.device-icon {
+
+width:
+    75px;
+
+height:
+    75px;
+
+margin:
+    0 auto 18px;
+
+display:
+    flex;
+
+align-items:
+    center;
+
+justify-content:
+    center;
+
+border-radius:
+    18px;
+
+background:
+    var(--screenlink-primary);
+
+font-size:
+    36px;
+
+box-shadow:
+    0 10px 25px
+    rgba(37, 99, 235, 0.25);
+
+}
+
+.title-section h2 {
+
+margin-bottom:
+    10px;
+
+font-size:
+    24px;
+
+color:
+    var(--screenlink-text);
+
+}
+
+.title-section p {
+
+color:
+    var(--screenlink-text-muted);
+
+line-height:
+    1.6;
+
+font-size:
+    14px;
+
+}
+
+/* =========================================
+CONNECTION SECTION
+========================================= */
+
+.connection-section {
+
+margin-bottom:
+    18px;
+
+}
+
+.connection-section label {
+
+display:
+    block;
+
+margin-bottom:
+    10px;
+
+font-size:
+    14px;
+
+font-weight:
+    bold;
+
+color:
+    var(--screenlink-text-secondary);
+
+}
+
+/* =========================================
+CONNECTION INPUT
+========================================= */
+
+#connectionCode {
+
+width:
+    100%;
+
+height:
+    58px;
+
+padding:
+    0 16px;
+
+border:
+    1px solid
+    var(--screenlink-border);
+
+border-radius:
+    14px;
+
+outline:
+    none;
+
+background:
+    var(--screenlink-bg-secondary);
+
+color:
+    var(--screenlink-text);
+
+font-size:
+    20px;
+
+font-weight:
+    bold;
+
+letter-spacing:
+    4px;
+
+text-align:
+    center;
+
+transition:
+    var(--screenlink-transition);
+
+}
+
+#connectionCode::placeholder {
+
+color:
+    var(--screenlink-text-placeholder);
+
+letter-spacing:
+    1px;
+
+font-size:
+    14px;
+
+}
+
+#connectionCode:focus {
+
+border-color:
+    var(--screenlink-primary);
+
+box-shadow:
+    0 0 0 3px
+    rgba(37, 99, 235, 0.18);
+
+}
+
+/* =========================================
+CONNECT BUTTON
+========================================= */
+
+.connect-button {
+
+width:
+    100%;
+
+height:
+    58px;
+
+border:
+    none;
+
+border-radius:
+    var(--screenlink-radius);
+
+background:
+    var(--screenlink-primary);
+
+color:
+    var(--screenlink-text);
+
+font-size:
+    16px;
+
+font-weight:
+    bold;
+
+cursor:
+    pointer;
+
+transition:
+    var(--screenlink-transition);
+
+}
+
+.connect-button:hover {
+
+background:
+    var(--screenlink-primary-hover);
+
+}
+
+.connect-button:active {
+
+transform:
+    scale(0.97);
+
+}
+
+/* =========================================
+DIVIDER
+========================================= */
+
+.divider {
+
+display:
+    flex;
+
+align-items:
+    center;
+
+gap:
+    15px;
+
+margin:
+    30px 0;
+
+color:
+    var(--screenlink-text-placeholder);
+
+font-size:
+    13px;
+
+}
+
+.divider::before,
+
+.divider::after {
+
+content:
+    "";
+
+flex:
+    1;
+
+height:
+    1px;
+
+background:
+    var(--screenlink-border);
+
+}
+
+/* =========================================
+SCAN QR BUTTON
+Opens scanner.html
+========================================= */
+
+.scan-button {
+
+width:
+    100%;
+
+height:
+    58px;
+
+border:
+    1px solid
+    var(--screenlink-border);
+
+border-radius:
+    var(--screenlink-radius);
+
+background:
+    var(--screenlink-bg-button);
+
+color:
+    var(--screenlink-text);
+
+font-size:
+    16px;
+
+font-weight:
+    bold;
+
+cursor:
+    pointer;
+
+transition:
+    var(--screenlink-transition);
+
+}
+
+.scan-button:hover {
+
+border-color:
+    var(--screenlink-primary);
+
+}
+
+.scan-button:active {
+
+transform:
+    scale(0.97);
+
+}
+
+/* =========================================
+CONNECTION STATUS
+========================================= */
+
+.connection-status {
+
+min-height:
+    52px;
+
+margin-top:
+    25px;
+
+padding:
+    15px;
+
+border-radius:
+    14px;
+
+background:
+    var(--screenlink-bg-secondary);
+
+border:
+    1px solid
+    var(--screenlink-border);
+
+color:
+    var(--screenlink-text-secondary);
+
+text-align:
+    center;
+
+font-size:
+    14px;
+
+line-height:
+    1.5;
+
+transition:
+    var(--screenlink-transition);
+
+}
+
+/* =========================================
+STATUS TYPES
+Can be controlled from connect.js
+========================================= */
+
+.connection-status.success {
+
+border-color:
+    var(--screenlink-success);
+
+color:
+    var(--screenlink-success);
+
+}
+
+.connection-status.warning {
+
+border-color:
+    var(--screenlink-warning);
+
+color:
+    var(--screenlink-warning);
+
+}
+
+.connection-status.error {
+
+border-color:
+    var(--screenlink-danger);
+
+color:
+    var(--screenlink-danger);
+
+}
+
+.connection-status.connecting {
+
+border-color:
+    var(--screenlink-primary);
+
+color:
+    #93c5fd;
+
+}
+
+/* =========================================
+SECURITY INFO
+========================================= */
+
+.security-info {
+
+margin-top:
+    22px;
+
+padding:
+    16px;
+
+border-radius:
+    var(--screenlink-radius);
+
+background:
+    var(--screenlink-bg-secondary);
+
+border:
+    1px solid
+    rgba(255, 255, 255, 0.1);
+
+}
+
+.security-info p {
+
+text-align:
+    center;
+
+font-size:
+    13px;
+
+line-height:
+    1.6;
+
+color:
+    var(--screenlink-text-muted);
+
+}
+
+/* =========================================
+PAGE CONNECTION LINKS
+Hidden system links for:
+scan.html
+connection.html
+session.html
+viewer.html
+share.html
+========================================= */
+
+#pageConnections {
+
+display:
+    none;
+
+}
+
+/* =========================================
+COMMON SCREENLINK ANIMATION
+========================================= */
+
+@keyframes screenLinkPulse {
+
+0% {
+
+    transform:
+        scale(1);
+
+}
+
+
+50% {
+
+    transform:
+        scale(1.03);
+
+}
+
+
+100% {
+
+    transform:
+        scale(1);
+
+}
+
+}
+
+.device-icon:active {
+
+animation:
+    screenLinkPulse
+    0.3s;
+
+}
+
+/* =========================================
+MOBILE
+========================================= */
+
+@media (
+max-width: 400px
+) {
+
+.connect-main {
+
+    padding:
+        28px 15px;
+
+}
+
+
+.connect-header {
+
+    padding:
+        15px;
+
+}
+
+
+.connect-header h1 {
+
+    font-size:
+        19px;
+
+}
+
+
+.title-section h2 {
+
+    font-size:
+        22px;
+
+}
+
+
+.device-icon {
+
+    width:
+        68px;
+
+    height:
+        68px;
+
+    font-size:
+        32px;
+
+}
+
+
+#connectionCode {
+
+    font-size:
+        18px;
+
+}
+
+}

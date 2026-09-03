@@ -1,0 +1,395 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>
+    Connect Device - ScreenLink
+</title>
+
+
+<!-- PAGE CSS -->
+
+<link
+    rel="stylesheet"
+    href="connect.css"
+>
+
+</head><body><div class="connect-page">
+
+
+    <!-- HEADER -->
+
+    <header class="connect-header">
+
+
+        <button
+            type="button"
+            class="back-button"
+            id="backButton"
+            aria-label="Go Back"
+        >
+            ←
+        </button>
+
+
+        <h1>
+            Connect Device
+        </h1>
+
+
+    </header>
+
+
+
+    <!-- MAIN -->
+
+    <main class="connect-main">
+
+
+        <!-- TITLE -->
+
+        <div class="title-section">
+
+
+            <div class="device-icon">
+                📱
+            </div>
+
+
+            <h2>
+                Connect another device
+            </h2>
+
+
+            <p>
+                Enter the connection code from
+                the other ScreenLink device.
+            </p>
+
+
+        </div>
+
+
+
+        <!-- CONNECTION CODE -->
+
+        <div class="connection-section">
+
+
+            <label
+                for="connectionCode"
+            >
+                Connection Code
+            </label>
+
+
+            <input
+                type="text"
+                id="connectionCode"
+                placeholder="Enter 6-digit code"
+                maxlength="6"
+                autocomplete="off"
+                inputmode="numeric"
+            >
+
+
+        </div>
+
+
+
+        <!-- CONNECT BUTTON -->
+
+        <button
+            type="button"
+            class="connect-button"
+            id="connectButton"
+        >
+            Connect Device
+        </button>
+
+
+
+        <!-- DIVIDER -->
+
+        <div class="divider">
+
+            <span>
+                OR
+            </span>
+
+        </div>
+
+
+
+        <!-- SCAN QR BUTTON -->
+
+        <button
+            type="button"
+            class="scan-button"
+            id="scanButton"
+        >
+            📷 Scan QR Code
+        </button>
+
+
+
+        <!-- STATUS -->
+
+        <div
+            class="connection-status"
+            id="connectionStatus"
+        >
+            Enter a connection code or scan a QR code.
+        </div>
+
+
+
+        <!-- SECURITY INFO -->
+
+        <div class="security-info">
+
+            <p>
+                🔒 The other device owner must
+                approve the connection.
+            </p>
+
+        </div>
+
+
+        <!-- HIDDEN PAGE CONNECTION AREA -->
+
+        <div
+            id="pageConnections"
+            style="display: none;"
+        >
+
+            <a href="scan.html">
+                Scan
+            </a>
+
+            <a href="connection.html">
+                Connection
+            </a>
+
+            <a href="session.html">
+                Session
+            </a>
+
+            <a href="viewer.html">
+                Viewer
+            </a>
+
+            <a href="share.html">
+                Share
+            </a>
+
+        </div>
+
+
+    </main>
+
+
+</div>
+
+
+
+<!-- PAGE JAVASCRIPT -->
+
+<script>
+
+    const backButton =
+        document.getElementById(
+            "backButton"
+        );
+
+
+    const connectionCode =
+        document.getElementById(
+            "connectionCode"
+        );
+
+
+    const connectButton =
+        document.getElementById(
+            "connectButton"
+        );
+
+
+    const scanButton =
+        document.getElementById(
+            "scanButton"
+        );
+
+
+    const connectionStatus =
+        document.getElementById(
+            "connectionStatus"
+        );
+
+
+
+    /* BACK BUTTON */
+
+    backButton.addEventListener(
+        "click",
+        function () {
+
+            window.history.back();
+
+        }
+    );
+
+
+
+    /* ONLY ALLOW NUMBERS */
+
+    connectionCode.addEventListener(
+        "input",
+        function () {
+
+            this.value =
+                this.value.replace(
+                    /[^0-9]/g,
+                    ""
+                );
+
+        }
+    );
+
+
+
+    /* CONNECT DEVICE */
+
+    connectButton.addEventListener(
+        "click",
+        function () {
+
+
+            const code =
+                connectionCode.value.trim();
+
+
+
+            if (
+                code.length !== 6
+            ) {
+
+                connectionStatus.innerHTML =
+                    "⚠️ Please enter a valid 6-digit connection code.";
+
+                return;
+
+            }
+
+
+
+            connectionStatus.innerHTML =
+                "⏳ Connecting device...";
+
+
+
+            /* SAVE CONNECTION CODE */
+
+            localStorage.setItem(
+                "screenLinkConnectionCode",
+                code
+            );
+
+
+
+            /* GO TO CONNECTION PAGE */
+
+            setTimeout(
+                function () {
+
+                    window.location.href =
+                        "connection.html";
+
+                },
+                800
+            );
+
+        }
+    );
+
+
+
+    /* SCAN QR PAGE */
+
+    scanButton.addEventListener(
+        "click",
+        function () {
+
+
+            connectionStatus.innerHTML =
+                "📷 Opening QR scanner...";
+
+
+
+            setTimeout(
+                function () {
+
+                    window.location.href =
+                        "scan.html";
+
+                },
+                400
+            );
+
+        }
+    );
+
+
+
+    /* ENTER KEY */
+
+    connectionCode.addEventListener(
+        "keydown",
+        function (
+            event
+        ) {
+
+            if (
+                event.key === "Enter"
+            ) {
+
+                connectButton.click();
+
+            }
+
+        }
+    );
+
+
+
+    /*
+    CONNECTION FLOW:
+
+    connect.html
+        ↓
+    connection.html
+        ↓
+    session.html
+        ↓
+    viewer.html
+
+    OR
+
+    connect.html
+        ↓
+    scan.html
+        ↓
+    connection.html
+        ↓
+    session.html
+        ↓
+    share.html
+
+    */
+
+</script>
+
+</body></html>

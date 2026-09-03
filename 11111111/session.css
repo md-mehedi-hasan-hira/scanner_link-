@@ -1,0 +1,376 @@
+/* =========================================
+   ScreenLink
+   Part 5 - Session Page
+========================================= */
+
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0f172a,
+            #111827,
+            #020617
+        );
+
+    color: white;
+
+}
+
+
+.session-page {
+
+    min-height: 100vh;
+
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.session-header {
+
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 0 18px;
+
+    background:
+        rgba(15,23,42,0.95);
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,0.08);
+
+}
+
+
+.session-header h1 {
+
+    font-size: 21px;
+
+}
+
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.back-button {
+
+    width: 44px;
+
+    height: 44px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background:
+        rgba(255,255,255,0.08);
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.session-main {
+
+    width: 100%;
+
+    max-width: 500px;
+
+    margin: auto;
+
+    padding: 35px 20px;
+
+    text-align: center;
+
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.session-icon {
+
+    width: 90px;
+
+    height: 90px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin:
+        0 auto 22px;
+
+    border-radius: 50%;
+
+    font-size: 42px;
+
+    background:
+        rgba(34,197,94,0.15);
+
+    border:
+        1px solid
+        rgba(34,197,94,0.35);
+
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.session-main h2 {
+
+    font-size: 25px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.session-description {
+
+    color: #cbd5e1;
+
+    line-height: 1.6;
+
+    margin-bottom: 28px;
+
+}
+
+
+/* =========================================
+   SESSION CARD
+========================================= */
+
+.session-card {
+
+    padding: 18px;
+
+    margin-bottom: 18px;
+
+    border-radius: 18px;
+
+    background:
+        rgba(255,255,255,0.06);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.10);
+
+}
+
+
+.card-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 12px 0;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,0.08);
+
+}
+
+
+.card-row:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.card-row span {
+
+    color: #94a3b8;
+
+    font-size: 14px;
+
+}
+
+
+.card-row strong {
+
+    color: #86efac;
+
+}
+
+
+/* =========================================
+   PERMISSION CARD
+========================================= */
+
+.permission-card {
+
+    display: flex;
+
+    gap: 14px;
+
+    padding: 18px;
+
+    margin-bottom: 22px;
+
+    text-align: left;
+
+    border-radius: 18px;
+
+    background:
+        rgba(59,130,246,0.10);
+
+    border:
+        1px solid
+        rgba(59,130,246,0.25);
+
+}
+
+
+.permission-icon {
+
+    font-size: 25px;
+
+}
+
+
+.permission-card h3 {
+
+    font-size: 16px;
+
+    margin-bottom: 7px;
+
+}
+
+
+.permission-card p {
+
+    color: #cbd5e1;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================================
+   START BUTTON
+========================================= */
+
+.start-button {
+
+    width: 100%;
+
+    height: 54px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    margin-bottom: 12px;
+
+    background: #22c55e;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+
+/* =========================================
+   DISCONNECT BUTTON
+========================================= */
+
+.disconnect-button {
+
+    width: 100%;
+
+    height: 52px;
+
+    border-radius: 15px;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.15);
+
+    background:
+        transparent;
+
+    color: #fca5a5;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+}
+
+
+/* =========================================
+   PRIVACY
+========================================= */
+
+.privacy-info {
+
+    margin-top: 25px;
+
+    padding: 15px;
+
+    border-radius: 15px;
+
+    color: #94a3b8;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    background:
+        rgba(255,255,255,0.04);
+
+}

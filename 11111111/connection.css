@@ -1,0 +1,489 @@
+/* =========================================
+   ScreenLink
+   Part 4 - Connection Page
+========================================= */
+
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0f172a,
+            #111827,
+            #020617
+        );
+
+    color: white;
+
+}
+
+
+.connection-page {
+
+    min-height: 100vh;
+
+    width: 100%;
+
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.connection-header {
+
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 0 18px;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,0.08);
+
+    background:
+        rgba(15,23,42,0.95);
+
+}
+
+
+.connection-header h1 {
+
+    font-size: 21px;
+
+    font-weight: 600;
+
+}
+
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.back-button {
+
+    width: 44px;
+
+    height: 44px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background:
+        rgba(255,255,255,0.08);
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+}
+
+
+.back-button:active {
+
+    transform: scale(0.94);
+
+    background:
+        rgba(255,255,255,0.16);
+
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.connection-main {
+
+    width: 100%;
+
+    max-width: 500px;
+
+    margin: auto;
+
+    padding: 35px 20px 40px;
+
+    text-align: center;
+
+}
+
+
+/* =========================================
+   CONNECTION ICON
+========================================= */
+
+.connection-icon {
+
+    width: 90px;
+
+    height: 90px;
+
+    margin:
+        0 auto 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-size: 42px;
+
+    background:
+        rgba(34,197,94,0.15);
+
+    border:
+        1px solid
+        rgba(34,197,94,0.35);
+
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.connection-main h2 {
+
+    font-size: 25px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.connection-description {
+
+    color: #cbd5e1;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    margin-bottom: 28px;
+
+}
+
+
+/* =========================================
+   DEVICE CARD
+========================================= */
+
+.device-card {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 18px;
+
+    margin-bottom: 18px;
+
+    text-align: left;
+
+    border-radius: 18px;
+
+    background:
+        rgba(255,255,255,0.06);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.10);
+
+}
+
+
+.device-icon {
+
+    width: 55px;
+
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background:
+        rgba(59,130,246,0.18);
+
+    font-size: 28px;
+
+}
+
+
+.device-info {
+
+    flex: 1;
+
+}
+
+
+.device-info h3 {
+
+    font-size: 17px;
+
+    margin-bottom: 7px;
+
+}
+
+
+.device-info p {
+
+    color: #94a3b8;
+
+    font-size: 13px;
+
+}
+
+
+.device-info strong {
+
+    color: #86efac;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* =========================================
+   PERMISSION BOX
+========================================= */
+
+.permission-box {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 13px;
+
+    padding: 17px;
+
+    margin-bottom: 20px;
+
+    text-align: left;
+
+    border-radius: 16px;
+
+    background:
+        rgba(245,158,11,0.10);
+
+    border:
+        1px solid
+        rgba(245,158,11,0.25);
+
+}
+
+
+.permission-icon {
+
+    font-size: 24px;
+
+}
+
+
+.permission-box h3 {
+
+    font-size: 15px;
+
+    margin-bottom: 6px;
+
+}
+
+
+.permission-box p {
+
+    color: #cbd5e1;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.connection-status {
+
+    min-height: 22px;
+
+    margin:
+        20px 0;
+
+    color: #cbd5e1;
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================
+   ACTION BUTTONS
+========================================= */
+
+.action-buttons {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-bottom: 28px;
+
+}
+
+
+.action-buttons button {
+
+    flex: 1;
+
+    height: 52px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s;
+
+}
+
+
+.action-buttons button:active {
+
+    transform: scale(0.96);
+
+}
+
+
+.deny-button {
+
+    background: #334155;
+
+}
+
+
+.allow-button {
+
+    background: #22c55e;
+
+}
+
+
+/* =========================================
+   SECURITY INFO
+========================================= */
+
+.security-info {
+
+    padding: 18px;
+
+    text-align: left;
+
+    border-radius: 16px;
+
+    background:
+        rgba(255,255,255,0.05);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.08);
+
+}
+
+
+.security-info h3 {
+
+    font-size: 15px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.security-info p {
+
+    color: #94a3b8;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    margin-top: 6px;
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 420px) {
+
+    .connection-main {
+
+        padding:
+            28px 15px 35px;
+
+    }
+
+
+    .connection-main h2 {
+
+        font-size: 22px;
+
+    }
+
+
+    .device-card {
+
+        padding: 15px;
+
+    }
+
+}

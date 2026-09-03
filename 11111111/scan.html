@@ -1,0 +1,216 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>
+    Scan QR - ScreenLink
+</title>
+
+
+<!-- PAGE CSS -->
+
+<link
+    rel="stylesheet"
+    href="scan.css"
+>
+
+</head><body><div class="scan-page">
+
+
+    <!-- HEADER -->
+
+    <header class="scan-header">
+
+
+        <button
+            class="back-button"
+            id="backButton"
+            type="button"
+            aria-label="Go Back"
+        >
+            ←
+        </button>
+
+
+        <h1>
+            Scan QR Code
+        </h1>
+
+
+    </header>
+
+
+
+    <!-- MAIN -->
+
+    <main class="scan-main">
+
+
+        <!-- TITLE -->
+
+        <div class="title-section">
+
+
+            <h2>
+                Scan ScreenLink QR
+            </h2>
+
+
+            <p>
+                Point your camera at the QR Code
+                shown on the other phone.
+            </p>
+
+
+        </div>
+
+
+
+        <!-- QR SCANNER -->
+
+        <div class="scanner-box">
+
+
+            <!--
+            html5-qrcode library will
+            automatically open the camera here.
+            -->
+
+            <div
+                id="reader"
+            ></div>
+
+
+
+            <!-- SCANNER FRAME -->
+
+            <div
+                class="scanner-frame"
+                aria-hidden="true"
+            >
+
+
+                <span
+                    class="corner top-left"
+                ></span>
+
+
+                <span
+                    class="corner top-right"
+                ></span>
+
+
+                <span
+                    class="corner bottom-left"
+                ></span>
+
+
+                <span
+                    class="corner bottom-right"
+                ></span>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- STATUS -->
+
+        <div
+            class="scan-status"
+            id="scanStatus"
+        >
+            Starting camera...
+        </div>
+
+
+
+        <!-- MANUAL CODE -->
+
+        <div
+            class="manual-section"
+        >
+
+
+            <p>
+                Or enter connection code
+            </p>
+
+
+
+            <div
+                class="code-input"
+            >
+
+
+                <input
+                    type="text"
+                    id="codeInput"
+                    placeholder="Enter 6-digit code"
+                    maxlength="6"
+                    autocomplete="off"
+                    autocapitalize="characters"
+                    inputmode="text"
+                >
+
+
+
+                <button
+                    id="connectButton"
+                    type="button"
+                >
+                    Connect
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- INFO -->
+
+        <div
+            class="info-box"
+        >
+
+
+            <p>
+                🔒 Screen sharing requires
+                permission from the other user.
+            </p>
+
+
+        </div>
+
+
+    </main>
+
+
+</div>
+
+
+
+<!-- QR SCANNER LIBRARY -->
+
+<script
+    src="https://unpkg.com/html5-qrcode"
+></script>
+
+
+
+<!-- PAGE JAVASCRIPT -->
+
+<script
+    src="scan.js"
+></script>
+
+</body></html>

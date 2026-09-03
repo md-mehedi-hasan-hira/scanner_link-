@@ -1,0 +1,401 @@
+/* =========================================
+   ScreenLink
+   Part 7 - Share Screen
+========================================= */
+
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #020617,
+            #0f172a,
+            #111827
+        );
+
+    color: white;
+
+}
+
+
+.share-page {
+
+    min-height: 100vh;
+
+    width: 100%;
+
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.share-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 15px;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,0.08);
+
+}
+
+
+.back-button {
+
+    width: 45px;
+
+    height: 45px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background:
+        rgba(255,255,255,0.08);
+
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+}
+
+
+.header-text h1 {
+
+    font-size: 19px;
+
+}
+
+
+.header-text p {
+
+    margin-top: 4px;
+
+    color: #94a3b8;
+
+    font-size: 13px;
+
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.share-main {
+
+    width: 100%;
+
+    max-width: 600px;
+
+    margin: auto;
+
+    padding:
+        40px 20px;
+
+    text-align: center;
+
+}
+
+
+/* =========================================
+   SHARE ICON
+========================================= */
+
+.share-icon {
+
+    width: 100px;
+
+    height: 100px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin:
+        0 auto 25px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(59,130,246,0.15);
+
+    font-size: 48px;
+
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.share-main h2 {
+
+    font-size: 25px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.share-description {
+
+    max-width: 430px;
+
+    margin:
+        0 auto 25px;
+
+    color: #94a3b8;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================================
+   CONNECTION CARD
+========================================= */
+
+.connection-card {
+
+    padding: 22px;
+
+    margin-bottom: 20px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255,255,255,0.06);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.08);
+
+}
+
+
+.card-label {
+
+    color: #94a3b8;
+
+    font-size: 13px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.connection-card h3 {
+
+    font-size: 28px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.connection-status {
+
+    color: #86efac;
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================
+   PRIVACY BOX
+========================================= */
+
+.privacy-box {
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+    border-radius: 18px;
+
+    text-align: left;
+
+    background:
+        rgba(255,255,255,0.04);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.07);
+
+}
+
+
+.privacy-box h3 {
+
+    margin-bottom: 10px;
+
+    font-size: 16px;
+
+}
+
+
+.privacy-box p {
+
+    color: #94a3b8;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================================
+   START BUTTON
+========================================= */
+
+.start-share-button {
+
+    width: 100%;
+
+    height: 58px;
+
+    border: none;
+
+    border-radius: 16px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+
+.start-share-button:active {
+
+    transform: scale(0.98);
+
+}
+
+
+.start-share-button:disabled {
+
+    opacity: 0.5;
+
+    cursor: not-allowed;
+
+}
+
+
+/* =========================================
+   STOP BUTTON
+========================================= */
+
+.stop-share-button {
+
+    width: 100%;
+
+    height: 55px;
+
+    margin-top: 12px;
+
+    border:
+        1px solid
+        rgba(239,68,68,0.5);
+
+    border-radius: 16px;
+
+    background:
+        rgba(239,68,68,0.10);
+
+    color: #fca5a5;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+}
+
+
+.stop-share-button:active {
+
+    transform: scale(0.98);
+
+}
+
+
+.stop-share-button:disabled {
+
+    opacity: 0.5;
+
+    cursor: not-allowed;
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 450px) {
+
+
+    .share-main {
+
+        padding:
+            30px 15px;
+
+    }
+
+
+    .share-main h2 {
+
+        font-size: 22px;
+
+    }
+
+
+    .connection-card h3 {
+
+        font-size: 24px;
+
+    }
+
+}

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Screen Viewer - ScreenLink</title>
+
+
+    <!-- VIEWER CSS -->
+
+    <link
+        rel="stylesheet"
+        href="viewer.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <div class="viewer-page">
+
+
+        <!-- ============================= -->
+        <!-- HEADER -->
+        <!-- ============================= -->
+
+        <header class="viewer-header">
+
+
+            <button
+                type="button"
+                class="back-button"
+                id="backButton"
+            >
+                ←
+            </button>
+
+
+            <div class="header-info">
+
+
+                <h1>
+                    Screen Viewer
+                </h1>
+
+
+                <p
+                    id="deviceName"
+                >
+                    ScreenLink Device
+                </p>
+
+
+            </div>
+
+
+
+            <div
+                class="connection-indicator"
+                id="connectionIndicator"
+            >
+
+                <span class="status-dot"></span>
+
+                <span
+                    id="connectionText"
+                >
+                    Connected
+                </span>
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- ============================= -->
+        <!-- MAIN -->
+        <!-- ============================= -->
+
+        <maiwidth class="viewer-main">
+
+
+            <!-- SCREEN VIEWER -->
+
+            <section
+                class="screen-container"
+                id="screenContainer"
+            >
+
+
+                <div
+                    class="screen-placeholder"
+                    id="screenPlaceholder"
+                >
+
+
+                    <div class="placeholder-icon">
+
+                        📱
+
+                    </div>
+
+
+                    <h2>
+                        Screen Sharing Ready
+                    </h2>
+
+
+                    <p>
+
+                        The shared screen will
+                        appear here after the
+                        device owner starts
+                        screen sharing.
+
+                    </p>
+
+
+                </div>
+
+
+                <!-- LIVE SCREEN AREA -->
+
+                <video
+                    id="remoteScreen"
+                    autoplay
+                    playsinline
+                ></video>
+
+
+            </section>
+
+
+
+            <!-- ============================= -->
+            <!-- SESSION INFORMATION -->
+            <!-- ============================= -->
+
+            <section class="session-info">
+
+
+                <div class="info-row">
+
+
+                    <span>
+
+                        Connection Code
+
+                    </span>
+
+
+                    <strong
+                        id="connectionCode"
+                    >
+
+                        ------
+
+                    </strong>
+
+
+                </div>
+
+
+
+                <div class="info-row">
+
+
+                    <span>
+
+                        Session Status
+
+                    </span>
+
+
+                    <strong
+                        id="sessionStatus"
+                    >
+
+                        Waiting
+
+                    </strong>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- ============================= -->
+            <!-- CONTROLS -->
+            <!-- ============================= -->
+
+            <section class="viewer-controls">
+
+
+                <!-- FULLSCREEN -->
+
+                <button
+                    type="button"
+                    class="control-button fullscreen-button"
+                    id="fullscreenButton"
+                >
+
+                    ⛶
+
+                    <span>
+                        Full Screen
+                    </span>
+
+                </button>
+
+
+
+                <!-- REFRESH -->
+
+                <button
+                    type="button"
+                    class="control-button refresh-button"
+                    id="refreshButton"
+                >
+
+                    ↻
+
+                    <span>
+                        Refresh
+                    </span>
+
+                </button>
+
+
+            </section>
+
+
+
+            <!-- ============================= -->
+            <!-- DISCONNECT -->
+            <!-- ============================= -->
+
+            <button
+                type="button"
+                class="disconnect-button"
+                id="disconnectButton"
+            >
+
+                Disconnect Session
+
+            </button>
+
+
+
+            <!-- ============================= -->
+            <!-- PRIVACY -->
+            <!-- ============================= -->
+
+            <div class="privacy-box">
+
+                <p>
+
+                    🔒 Screen sharing requires
+                    explicit permission from
+                    the device owner.
+
+                </p>
+
+            </div>
+
+
+        </maiwidth    </div>
+
+
+
+    <!-- VIEWER JAVASCRIPT -->
+
+    <script
+        src="viewer.js"
+    ></script>
+
+
+</body>
+
+</html>

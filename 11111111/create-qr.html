@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Create QR - ScreenLink
+    </title>
+
+
+    <!-- PAGE CSS -->
+
+    <link
+        rel="stylesheet"
+        href="create-qr.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <div class="qr-page">
+
+
+        <!-- ========================= -->
+        <!-- HEADER -->
+        <!-- ========================= -->
+
+        <header class="qr-header">
+
+
+            <button
+                type="button"
+                class="back-button"
+                id="backButton"
+            >
+                ←
+            </button>
+
+
+            <h1>
+                Create QR
+            </h1>
+
+
+        </header>
+
+
+
+        <!-- ========================= -->
+        <!-- MAIN -->
+        <!-- ========================= -->
+
+        <main class="qr-main">
+
+
+            <!-- TITLE -->
+
+            <div class="title-section">
+
+
+                <h2>
+                    Scan this QR Code
+                </h2>
+
+
+                <p>
+                    Use another Android phone
+                    to scan this code.
+                </p>
+
+
+            </div>
+
+
+
+            <!-- QR BOX -->
+
+            <div class="qr-box">
+
+
+                <div
+                    id="qrcode"
+                ></div>
+
+
+            </div>
+
+
+
+            <!-- CONNECTION CODE -->
+
+            <div class="connection-box">
+
+
+                <span>
+                    Connection Code
+                </span>
+
+
+                <strong
+                    id="connectionCode"
+                >
+                    Generating...
+                </strong>
+
+
+            </div>
+
+
+
+            <!-- CONNECTION STATUS -->
+
+            <div class="status">
+
+
+                <span
+                    class="status-dot"
+                ></span>
+
+
+                <span
+                    id="statusText"
+                >
+                    Connecting to server...
+                </span>
+
+
+            </div>
+
+
+
+            <!-- INFO -->
+
+            <div class="info-box">
+
+
+                <p>
+                    1. Open the ScreenLink scanner
+                    on the other phone.
+                </p>
+
+
+                <p>
+                    2. Scan this QR Code.
+                </p>
+
+
+                <p>
+                    3. The device owner must approve
+                    the connection.
+                </p>
+
+
+            </div>
+
+
+
+            <!-- CANCEL -->
+
+            <button
+                type="button"
+                class="cancel-button"
+                id="cancelButton"
+            >
+                Cancel
+            </button>
+
+
+        </main>
+
+
+    </div>
+
+
+
+    <!-- ========================= -->
+    <!-- QR CODE LIBRARY -->
+    <!-- ========================= -->
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+    ></script>
+
+
+
+    <!-- ========================= -->
+    <!-- SOCKET.IO CLIENT -->
+    <!-- ========================= -->
+
+    <script
+        src="http://192.168.0.100:3000/socket.io/socket.io.js"
+    ></script>
+
+
+
+    <!-- ========================= -->
+    <!-- PAGE JAVASCRIPT -->
+    <!-- ========================= -->
+
+    <script
+        src="create-qr.js"
+    ></script>
+
+
+</body>
+
+</html>
